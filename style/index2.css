@@ -1,0 +1,926 @@
+* {
+  /* box-sizing: content-box; */
+  padding: 0;
+  margin: 0;
+  font-family: "Gill sans", "Verdana", "Trebuchet", "sans-serif";
+}
+
+
+
+/*==========panier============================================================*/
+#search_icon,
+#compte_icon,
+#panier_icon {
+  border: solid 1px gold;
+  border-radius: 5px;
+  background-color: gold;
+  padding: 2px;
+}
+
+#menuToggle {
+padding: 2px;
+}
+
+#dropdown, #dropdown-mobile {
+  position: relative;
+
+}
+
+#dropdown a, #dropdown-mobile a {
+  text-decoration: none;
+}
+
+#cart-dropdown, #cart-dropdown-mobile {
+  border: solid 1px gold;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 2000;
+  list-style-type: none;
+  padding: 10px;
+}
+
+
+.cart_qty {
+  width: 50px;
+}
+
+table {
+   margin: 20px;
+   /* border-collapse:separate; */
+   border-spacing: 10px 10px;
+   border: solid 1px gold;
+   border-radius: 5px;
+}
+
+td {
+  text-align: center;
+}
+
+
+#col_article {
+  width: 200px;
+}
+
+#col_prix {
+  width: 50px;
+}
+
+#col_qty {
+  width: 50px;
+}
+
+#col_suppr {
+  width: 60px;
+}
+
+#col_stotal {
+  width: 100px;
+}
+
+#prix_total {
+  margin-left: 18px;
+
+
+}
+
+#prix_total p {
+  border: solid 1px gold;
+  border-radius: 5px;
+  width: 124px;
+  padding: 5px;
+
+}
+
+
+#commande_btns {
+  margin-left: 18px;
+  margin-top: 65px;
+}
+
+
+/*==========arborescence======================================================*/
+.arbo {
+  margin-top: 50px;
+}
+
+#contenu a {
+  text-decoration: none;
+  color: black;
+}
+
+#contenu a:hover {
+  text-decoration: none;
+  color: gold;
+}
+
+/* pagination / tri ========================================================= */
+ #filtres {
+  margin-bottom: 15px;
+  padding: 8px;
+ }
+
+#nb_items_page, #tri_select {
+  border: solid 2px gold;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+/*==========contenu===========================================================*/
+
+#enTete {
+  text-align: left;
+  flex: 3;
+  margin-top: 20px;
+}
+
+#bouton {
+  flex: 2;
+  text-align: left;
+  margin-top: 50px;
+  color: gold;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#bouton input {
+  border: 1px solid gold;
+  border-radius: 5px;
+  width: 60px;
+  font-size: 16px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#bouton .soumettrePanier {
+  background-color: gold;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  /* width: 70%; */
+  box-sizing: border-box;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+#bouton .soumettrePanier:hover {
+  background-color: #ffffff;
+  color: #e8b960;
+  cursor: pointer;
+}
+
+/*=================================================*/
+
+
+/* tri filtres */
+#filtres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+/* ===== PAGINATION ==========================================================*/
+#pagination_b {
+  display: inline-flex;
+}
+#suivant, #precedent {
+  margin: 3px;
+}
+/*=======================================*/
+
+
+/* MEDIA SMALL ===============================================================*/
+@media only all and (max-width: 767px) {
+
+  header {
+    display: inline-block;
+    position: fixed;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    top: 0;
+    height: 250px;
+    background-image: url("../images/banniereleger2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin: 20px;
+    font-weight: normal;
+    color: gold;
+    text-shadow: 2px 2px 0,
+                 4px 4px 0 black;
+  }
+
+  #contenu {
+    margin-top: 270px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  #mobile_title {
+    margin-top: 10px;
+    text-align: center;
+
+    color: gold;
+    text-shadow: 2px 2px 0,
+                 4px 4px 0 black;
+  }
+
+  #mobile_title a {
+    text-decoration: none;
+    color: gold;
+  }
+
+  /* éviter soulignement et changement couleur liens */
+  #mobile_title a:hover,   #mobile_title a:visited,   #mobile_title a:active
+{
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: gold;
+  text-shadow: 2px 2px 0,
+               4px 4px 0 black;
+}
+
+  #mobile_icons {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  #search_icon,
+  #compte_icon,
+  #panier_icon {
+    margin: 3px;
+  }
+
+  #search_icon:hover {
+    cursor: pointer;
+  }
+
+  #recherche_p {
+    display: none;
+  }
+
+  #panier_btn,
+  #compte_btn {
+    display: none;
+  }
+
+  #header_container {
+    display: none;
+  }
+
+/*  #search_menu {
+    display: none;
+     margin-left: 25%;
+    margin-bottom: 15px;
+  }*/
+
+  #header_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+  }
+
+
+
+/* boutons ================================================================== */
+  #compte_btn,
+  #panier_btn,
+  #confirm_command ,
+  #delete_cart ,
+  .pagination_btns {
+    background-color: gold;
+    border: 1px solid gold;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    /* width: 70%; */
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  #compte_btn:hover,
+  #panier_btn:hover,
+  #confirm_command:hover,
+  #delete_cart:hover,
+  .pagination_btns:hover {
+    background-color: #ffffff;
+    color: #e8b960;
+    cursor: pointer;
+  }
+
+
+/* ===================contenu================================================ */
+  .detail {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #enTeteEtBouton {
+    flex-direction: column;
+  }
+
+  #bouton {
+    margin-left: 10%;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+  }
+
+  .descriptionReste, .descriptionTitre, .descriptionSerie {
+    display: flex;
+  }
+
+  .questions, .questionsTitre, .questionsSerie  {
+    flex: 0.5;
+    margin: 10px;
+  }
+
+  .reponses, .reponsesTitre, .reponsesSerie {
+    flex: 1;
+    margin: 10px;
+    max-width: 300px;
+  }
+
+  .synopsis {
+    flex-direction: column;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+
+  .imageGN {
+    flex: 1;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .imageGN img {
+    border: 1px solid gold;
+    width: 90%;
+  }
+
+  section {
+    border : 2px solid gold;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  #txtResult, #nbResult {
+    font-weight: bold;
+  }
+
+
+
+  /* ===================BURGER MENU ========================================= */
+  /*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 17px;
+    left: 50px;
+    width: 0;
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: gold;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 45px; /*33*/
+    height: 7px;/*4*/
+    margin-bottom: 5px;
+    position: relative;
+
+    background: gold;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -300px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    text-align: right;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menu li:hover {
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+    /* border-bottom: none; */
+    background-color: #b9b9b9;
+  }
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  /*==========Barre de recherche==============================================*/
+
+  #recherche_p_mobile,
+  #recherche_p_mobile p {
+    text-align: center;
+  }
+
+  #search_mobile {
+    height: 20px;
+    width: 250px;
+    font-size: 16px;
+  }
+
+  #search-btn-mobile {
+    padding-left: 10px;
+    position: absolute;
+    top: 72%;
+  }
+
+  #recherche_mobile {
+    border: 1px solid gold;
+    width: 120px;
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+/* MEDIA LARGE ===============================================================*/
+@media only all and (min-width: 768px) {
+  #panier_icon,
+  #compte_icon,
+  #search_icon,
+  #mobile_title {
+    display: none;
+    flex-direction: column;
+  }
+
+  #burger_check {
+    display: none;
+  }
+
+  #recherche_p_mobile {
+    display: none;
+  }
+
+/*  #search_menu {
+    display: none;
+  }*/
+
+  /*==========topnav(Compte/panier)===========================================*/
+
+  #topnav {
+    flex-direction: column;
+  }
+
+  #compte_btn,
+  #panier_btn,
+  #confirm_command ,
+  #delete_cart ,
+  .pagination_btns {
+    background-color: gold;
+    border: 1px solid gold;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    /* width: 70%; */
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  #compte_btn:hover,
+  #panier_btn:hover,
+  #confirm_command:hover,
+  #delete_cart:hover,
+  .pagination_btns:hover {
+    background-color: #ffffff;
+    color: #e8b960;
+    cursor: pointer;
+  }
+
+  #compte_top {
+    margin-bottom: 60%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    top: 0;
+  }
+
+  #header_container {
+    order: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    height: 250px;
+    background-image: url("../images/banniereleger.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #header_container h1 {
+    text-align: center;
+  }
+
+  #header_mobile {
+    order: 2;
+  }
+
+  h1 {
+    font-size: 60px;
+    color: gold;
+    text-shadow: 2px 2px 0,
+                 4px 4px 0 black;
+  }
+
+#title a {
+  text-decoration: none;
+}
+
+  /* éviter soulignement et changement couleur liens */
+  #title a, #title a:hover, #title a:visited, #title a:active
+{
+  font-size: 60px;
+  color: gold;
+  text-shadow: 2px 2px 0,
+               4px 4px 0 black;
+}
+
+  h2 {
+    font-size: 40px;
+    margin: 30px;
+    font-weight: normal;
+    color: gold;
+    text-shadow: 2px 2px 0,
+                 4px 4px 0 black;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  /*==========Barre de recherche==============================================*/
+
+  #search {
+    height: 30px;
+    width: 250px;
+    font-size: 16px;
+  }
+
+  #search-btn {
+    padding-left: 20px;
+    position: absolute;
+    top: 43%;
+  }
+
+  #recherche {
+    border: 1px solid gold;
+    width: 120px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /*==========panier==========================================================*/
+
+  #cart-dropdown {
+    position: absolute;
+    top: 30%;
+    width: 250px;
+  }
+
+  /*==========Menu============================================================*/
+
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    /* position: sticky; */
+    top: 0px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    /* display: none; */
+    box-shadow: 0px 1px 2px #ccc;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+  }
+
+  nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    padding: 10px;
+    /* border-bottom: none; */
+  }
+
+  nav a:hover {
+    font-weight: bold;
+    color: gold;
+    border-bottom: 2px solid gold;
+    /* border-bottom: none; */
+    background-color: rgba(200, 200, 200, 0.1);
+  }
+
+  /*==========Contenu=========================================================*/
+
+  #contenu {
+    margin-top: 300px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  #txtResult, #nbResult {
+    font-weight: bold;
+  }
+
+  #enTeteEtBouton {
+    display: flex;
+  }
+
+  .detail {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin-right: 30px;
+  }
+
+  .descriptionTitre,
+  .descriptionSerie,
+  .descriptionReste,
+  .synopsis {
+    display: flex;
+  }
+
+  .questions,
+  .questionsTitre,
+  .questionsSerie  {
+    flex: 0.5;
+    margin: 10px;
+  }
+
+  .reponses,
+  .reponsesTitre,
+  .reponsesSerie {
+    flex: 1;
+    margin: 10px;
+    max-width: 300px;
+  }
+
+  .synopsis {
+    flex-direction: column;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+
+  .imageGN {
+    flex: 2;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .imageGN img {
+    border: 1px solid gold;
+  }
+
+  section{
+    border : 2px solid gold;
+    border-radius: 5px;
+    margin-top: 20px;
+    top: 0;
+  }
+
+}
+
+/* MEDIA MEDIUM ==============================================================*/
+@media only screen and (min-width: 768px) and (max-width: 1110px) {
+  .detail {
+    flex-direction: column;
+  }
+
+  .imageGN {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .imageGN img {
+    border: 1px solid gold;
+  }
+}
+
+/*==========footer============================================================*/
+
+footer {
+  margin: 30px;
+  width: 100%;
+  margin: 30px;
+  position: sticky;
+  top: 0px;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+footer a:hover {
+  font-weight: bold;
+  color: gold;
+  border-bottom: 2px solid gold;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+footer ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+footer ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}

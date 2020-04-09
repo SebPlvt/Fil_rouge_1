@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BD Drive -- Catalogue</title>
+    <link rel="stylesheet" href="../style/index2.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <h1 id="mobile_title"><a href="../index.html">BD Drive</a></h1>
+
+        <div id="header_mobile">
+
+            <nav id="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" id="burger_check" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <li><a href="./catalogue.html">Catalogue</a></li>
+                        <li><a href="./about.html">A propos</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./admin.html">Administration</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="mobile_icons">
+                <!-- <div id="search_icon">
+                    <img
+                        src="../icons/search_gw.png"
+                        alt="Icône Recherche"
+                        width="50px"
+                        height="50px">
+                </div> -->
+
+                <a href="#">
+                    <div id="compte_icon">
+                        <img
+                            src="../icons/user_gw.png"
+                            alt="Icône Login"
+                             width="50px"
+                             height="50px">
+                    </div>
+                </a>
+
+
+                <a href="./panier.html">
+                    <div id="panier_icon" class="dropdown-mobile">
+                        <div class="cart-mobile">
+                            <img
+                                src="../icons/shopping_cart_gw.png"
+                                class="cart"
+                                alt="Icône Panier"
+                                width="50px"
+                                height="50px">
+                        </div>
+                    </div>
+
+                    <!--  aperçu panier mobile (caché) -->
+                    <ul id="cart-dropdown-mobile" hidden>
+                        <li id="empty-cart-msg-mobile">
+                            <a>Votre panier est vide</a></li>
+                        <li id="go-to-cart-mobile" hidden>
+                        </li>
+                    </ul>
+
+                </a>
+            </div>
+        </div>
+
+        <div id="header_container">
+            <h1 id="title"><a href="../index.html">BD <br/>Drive</a></h1>
+
+            <div id="recherche_p">
+                <div id="searchthis">
+                    <form id="searchFormPC" action="../pages/rechercher.html" method="GET">
+                        <input
+                            id="search"
+                            name="txt"
+                            type="text"
+                            placeholder="Ex : Spirou, Titeuf,..." />
+                        <a id="search-btn">
+                            <img
+                                src="../icons/search_gw.png"
+                                alt="Icône Recherche"
+                                width="35px"
+                                height="35px">
+                        </a>
+                        <p>Recherche par :
+                            <select name="type" id="recherche">
+                                <option value="titre">titre</option>
+                                <option value="serie">série</option>
+                                <option value="auteur">auteur</option>
+                                <option value="prix_max">prix max</option>
+                            </select>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <div id="topnav">
+                <div id="compte_top">
+                    <input
+                        type="button"
+                        name="compte"
+                        id="compte_btn"
+                        value="Mon compte">
+                </div>
+
+                <a href="./panier.html">
+                    <div id="panier_top">
+                        <div id="dropdown">
+                            <div id="cart">
+                                <div id="panier_btn">Mon panier</div>
+                            </div>
+
+                            <!--  aperçu panier (caché) -->
+                            <ul id="cart-dropdown" hidden>
+                                <li id="empty-cart-msg">
+                                    <a>Votre panier est vide</a></li>
+                                <li id="go-to-cart" hidden>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="recherche_p_mobile">
+            <form id="searchFormMobile" action="../pages/rechercher.html" method="GET">
+                <input
+                    id="search_mobile"
+                    name="txt"
+                    type="text"
+                    placeholder="Ex : Spirou, Titeuf,..." />
+                <a id="search-btn-mobile">
+                    <img
+                        src="../icons/search_gw.png"
+                        alt="Icône Recherche"
+                        width="35px"
+                        height="35px">
+                </a>
+                <p>Recherche par :
+                    <select name="type" id="recherche_mobile">
+                        <option value="titre">titre</option>
+                        <option value="serie">série</option>
+                        <option value="auteur">auteur</option>
+                        <option value="prix_max">prix max</option>
+                    </select>
+                </p>
+            </form>
+        </div>
+
+    </header>
+
+
+
+    <div id="contenu">
+
+
+        <div class="arbo">
+            <a href="../index.html">Accueil</a> &gt; Catalogue
+        </div>
+
+        <h2> Catalogue</h2>
+        <br />
+
+        <div id="filtres">
+            <div id="nb_articles">Nombre d'articles par page :
+                <select id="nb_items_page">
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="48">48</option>
+                    <option value="64">64</option>
+                </select>
+            </div>
+
+            <div id="tri_catalogue"> Trier par :
+                <select id="tri_select">
+                    <option value=""> </option> <!-- nothing-->
+                    <option value="titre">Titre</option>
+                    <option value="prix">Prix</option>
+                    <option value="serie">Série</option>
+                    <option value="auteur">Auteur</option>
+                    <option value="numero">Numero</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="catalogue_div">
+
+        </div>
+
+
+        <div id="pagination_b">
+
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <ul>
+            <li><a href="#">Website admin contact</a></li>
+            <li><a href="#">Société - adresse - Tel - Siret</a></li>
+            <li><a href="#">Entreprise contacts</a></li>
+        </ul>
+    </footer>
+
+
+    <script src="../data/albums.js"></script>
+    <script src="../data/series.js"></script>
+    <script src="../data/auteurs.js"></script>
+    <script src="../js/catalogue.class.js"></script>
+    <script src="../js/panier.class.js"></script>
+    <script src="../js/panier_main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/recherche.js"></script>
+    <script src="../js/main_catalogue.js"></script>
+    <script src="../js/pagination.js"></script>
+
+
+</body>
+
+</html>
